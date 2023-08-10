@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<h1 align="center">Sending Event Emails</h1>
+<form method="post">
+ {% csrf_token %}
+ <div class="mb-3">
+     <label for="exampleFormControlInput1" class="form-label"><b>Add Employee's Email address Here:</b></label>
+     <input type="text" class="form-control" name="email" id="exampleFormControlInput1" placeholder="Receipt email address">
+   </div>
+   <div class="mb-3">
+     <label for="exampleInputSubject" class="form-label">Subject:</label>
+     <input type="text" class="form-control" name="subject" id="exampleInputSubject">
+   </div>
+   <div class="mb-3">
+     <label for="exampleFormControlTextarea1" class="form-label">Message:</label><br>
+     <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
+   </div>
+   <button type="submit" class="btn btn-primary">Send</button>
+ </form>
+</body>
+</html>
